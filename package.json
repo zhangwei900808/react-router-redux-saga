@@ -47,6 +47,7 @@
     "react-dom": "^16.8.3",
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.2",
     "resolve": "1.10.0",
@@ -63,9 +64,7 @@
     "start": "node scripts/start.js",
     "start-js": "react-scripts start",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "lint": "eslint --ext .js --ext .jsx src/",
-    "precommit": "npm run lint"
+    "test": "node scripts/test.js"
   },
   "eslintConfig": {
     "extends": "react-app"
