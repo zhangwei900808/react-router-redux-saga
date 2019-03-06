@@ -1,7 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import { addTodo } from "../redux/actions";
 
+@connect(
+  null,
+  dispatch => bindActionCreators({ addTodo }, dispatch)
+)
 class AddTodo extends React.Component {
   constructor(props) {
     super(props);
@@ -32,7 +37,4 @@ class AddTodo extends React.Component {
   }
 }
 
-export default connect(
-  null,
-  { addTodo }
-)(AddTodo);
+export default AddTodo;
