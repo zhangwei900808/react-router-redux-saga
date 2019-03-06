@@ -65,7 +65,7 @@
     "start-js": "react-scripts start",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "precommit": "prettier-quick --staged"
+    "precommit": "pretty-quick --staged"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -138,7 +138,9 @@
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
     "prettier": "^1.16.4",
-    "prettier-quick": "^0.0.5"
+    "pretty-quick": "^1.10.0"
   }
 }
