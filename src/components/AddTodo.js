@@ -5,21 +5,33 @@ import { addTodo } from "../redux/actions";
 
 @connect(
   null,
-  dispatch => bindActionCreators({ addTodo }, dispatch)
+  dispatch =>
+    bindActionCreators(
+      {
+        addTodo
+      },
+      dispatch
+    )
 )
 class AddTodo extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { input: "" };
+    this.state = {
+      input: ""
+    };
   }
 
   updateInput = input => {
-    this.setState({ input });
+    this.setState({
+      input
+    });
   };
 
   handleAddTodo = () => {
     this.props.addTodo(this.state.input);
-    this.setState({ input: "" });
+    this.setState({
+      input: ""
+    });
   };
 
   render() {
@@ -28,10 +40,10 @@ class AddTodo extends React.Component {
         <input
           onChange={e => this.updateInput(e.target.value)}
           value={this.state.input}
-        />
+        />{" "}
         <button className="add-todo" onClick={this.handleAddTodo}>
-          Add Todo
-        </button>
+          Add Todo{" "}
+        </button>{" "}
       </div>
     );
   }
