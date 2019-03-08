@@ -1,9 +1,10 @@
+import Index from "../pages/Index";
 import TodoPage from "../pages/TodoPage";
 
 const routes = [
   {
     path: "/",
-    component: TodoPage,
+    component: Index,
     exact: true
   },
   {

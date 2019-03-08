@@ -1,8 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
 import { addTodo } from "../redux/actions";
 
+@withRouter
 @connect(
   null,
   dispatch =>
@@ -33,7 +35,9 @@ class AddTodo extends React.Component {
       input: ""
     });
   };
-
+  back = () => {
+    this.props.history.push("/");
+  };
   render() {
     return (
       <div>
@@ -43,6 +47,9 @@ class AddTodo extends React.Component {
         />{" "}
         <button className="add-todo" onClick={this.handleAddTodo}>
           Add Todo{" "}
+        </button>{" "}
+        <button className="add-todo" onClick={this.back}>
+          返回
         </button>{" "}
       </div>
     );
