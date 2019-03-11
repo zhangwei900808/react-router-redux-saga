@@ -8,6 +8,7 @@ import { getTodosByVisibilityFilter } from "../redux/selectors";
 const mapStateToProps = state => {
   const { visibilityFilter } = state;
   const todos = getTodosByVisibilityFilter(state, visibilityFilter);
+
   return { todos };
 };
 

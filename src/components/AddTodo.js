@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
-import { addTodo } from "../redux/actions";
+import todoActions from "../redux/actions/todo";
 
 @withRouter
 @connect(
@@ -10,7 +10,7 @@ import { addTodo } from "../redux/actions";
   dispatch =>
     bindActionCreators(
       {
-        addTodo
+        addTodo: todoActions.addTodo
       },
       dispatch
     )

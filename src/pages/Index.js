@@ -13,7 +13,7 @@ class Index extends Component {
   render() {
     return (
       <div>
-        <div onClick={this.clickMe}>Click Me To Todo Page</div>
+        <div onClick={this.clickMe}>Click Me Route To Todo Page</div>
       </div>
     );
   }

@@ -1,13 +1,14 @@
-import { ADD_TODO, TOGGLE_TODO } from "../actions/actionTypes";
+import { handleActions } from "redux-actions";
+import todoActionTypes from "../actions/todo/types";
 
 const initState = {
   allIds: [],
   byIds: {}
 };
 
-export default function(state = initState, action) {
-  switch (action.type) {
-    case ADD_TODO: {
+const todoReducer = handleActions(
+  {
+    [todoActionTypes.ADD_TODO]: (state, action) => {
       const { id, content } = action.payload;
       return {
         ...state,
@@ -20,9 +21,8 @@ export default function(state = initState, action) {
           }
         }
       };
-    }
-
-    case TOGGLE_TODO: {
+    },
+    [todoActionTypes.TOGGLE_TODO]: (state, action) => {
       const { id } = action.payload;
       return {
         ...state,
@@ -35,7 +35,8 @@ export default function(state = initState, action) {
         }
       };
     }
-    default:
-      return state;
-  }
-}
+  },
+  initState
+);
+
+export default todoReducer;

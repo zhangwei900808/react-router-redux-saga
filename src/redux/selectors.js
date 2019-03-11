@@ -17,6 +17,7 @@ export const getTodos = store =>
 
 export const getTodosByVisibilityFilter = (store, visibilityFilter) => {
   const allTodos = getTodos(store);
+
   switch (visibilityFilter) {
     case VISIBILITY_FILTERS.COMPLETED:
       return allTodos.filter(todo => todo.completed);
