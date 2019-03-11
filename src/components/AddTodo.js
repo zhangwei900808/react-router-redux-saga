@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { bindActionCreators } from "redux";
-import todoActions from "../redux/actions/todo";
+import todoActions from "../redux/actions/todoAction";
 
 @withRouter
 @connect(
@@ -10,7 +10,8 @@ import todoActions from "../redux/actions/todo";
   dispatch =>
     bindActionCreators(
       {
-        addTodo: todoActions.addTodo
+        addTodo: todoActions.addTodo,
+        test: todoActions.test
       },
       dispatch
     )
@@ -31,6 +32,7 @@ class AddTodo extends React.Component {
 
   handleAddTodo = () => {
     this.props.addTodo(this.state.input);
+    this.props.test();
     this.setState({
       input: ""
     });

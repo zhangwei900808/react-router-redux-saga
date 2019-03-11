@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import cx from "classnames";
-import todoActions from "../redux/actions/todo";
+import todoActions from "../redux/actions/todoAction";
 
 const Todo = ({ todo, toggleTodo }) => (
   <li className="todo-item" onClick={() => toggleTodo(todo.id)}>

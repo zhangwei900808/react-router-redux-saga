@@ -1,5 +1,5 @@
 // import { delay } from "redux-saga";
-import todoActionTypes from "../../actions/todo/types";
+import { todoTypes } from "../../actions/todoAction";
 import { put, takeEvery } from "redux-saga/effects";
 
 export function* fetchProject() {
@@ -8,5 +8,5 @@ export function* fetchProject() {
 }
 
 export default function* todoSaga() {
-  yield takeEvery(todoActionTypes.ADD_TODO, fetchProject);
+  yield takeEvery(todoTypes.TEST, fetchProject);
 }

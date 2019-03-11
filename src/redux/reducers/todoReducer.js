@@ -1,5 +1,5 @@
 import { handleActions } from "redux-actions";
-import todoActionTypes from "../actions/todo/types";
+import { todoTypes } from "../actions/todoAction";
 
 const initState = {
   allIds: [],
@@ -8,7 +8,7 @@ const initState = {
 
 const todoReducer = handleActions(
   {
-    [todoActionTypes.ADD_TODO]: (state, action) => {
+    [todoTypes.ADD_TODO]: (state, action) => {
       const { id, content } = action.payload;
       return {
         ...state,
@@ -22,7 +22,7 @@ const todoReducer = handleActions(
         }
       };
     },
-    [todoActionTypes.TOGGLE_TODO]: (state, action) => {
+    [todoTypes.TOGGLE_TODO]: (state, action) => {
       const { id } = action.payload;
       return {
         ...state,
