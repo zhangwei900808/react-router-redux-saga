@@ -6,8 +6,15 @@ const ADD_TODO = "ADD_TODO";
 const TOGGLE_TODO = "TOGGLE_TODO";
 const SET_FILTER = "SET_FILTER";
 const TEST = "TEST";
+const REMOVE_ALL = "REMOVE_ALL";
 
-export const todoTypes = { ADD_TODO, TOGGLE_TODO, SET_FILTER, TEST };
+export const todoTypes = {
+  ADD_TODO,
+  TOGGLE_TODO,
+  SET_FILTER,
+  TEST,
+  REMOVE_ALL
+};
 
 export default createActions({
   ADD_TODO: content => {
@@ -23,5 +30,6 @@ export default createActions({
   },
   TEST: () => {
     return {};
-  }
+  },
+  REMOVE_ALL: () => {}
 });

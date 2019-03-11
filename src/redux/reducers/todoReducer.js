@@ -34,6 +34,13 @@ const todoReducer = handleActions(
           }
         }
       };
+    },
+    [todoTypes.REMOVE_ALL]: (state, action) => {
+      return {
+        ...state,
+        allIds: [],
+        byIds: {}
+      };
     }
   },
   initState

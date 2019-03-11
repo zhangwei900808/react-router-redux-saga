@@ -11,7 +11,8 @@ import todoActions from "../redux/actions/todoAction";
     bindActionCreators(
       {
         addTodo: todoActions.addTodo,
-        test: todoActions.test
+        test: todoActions.test,
+        removeAll: todoActions.removeAll
       },
       dispatch
     )
@@ -40,6 +41,10 @@ class AddTodo extends React.Component {
   back = () => {
     this.props.history.push("/");
   };
+
+  componentDidMount() {
+    this.props.removeAll();
+  }
   render() {
     return (
       <div>
