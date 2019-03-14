@@ -41,6 +41,12 @@ const todoReducer = handleActions(
         allIds: [],
         byIds: {}
       };
+    },
+    [todoTypes.TEST_SAGA_SUCCESS]: (state, action) => {
+      return {
+        ...state,
+        list: action.response
+      };
     }
   },
   initState

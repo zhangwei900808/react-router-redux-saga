@@ -6,6 +6,7 @@ const ADD_TODO = "ADD_TODO";
 const TOGGLE_TODO = "TOGGLE_TODO";
 const SET_FILTER = "SET_FILTER";
 const TEST = "TEST";
+const TEST_SAGA_SUCCESS = "TEST_SAGA_SUCCESS";
 const REMOVE_ALL = "REMOVE_ALL";
 
 export const todoTypes = {
@@ -13,7 +14,8 @@ export const todoTypes = {
   TOGGLE_TODO,
   SET_FILTER,
   TEST,
-  REMOVE_ALL
+  REMOVE_ALL,
+  TEST_SAGA_SUCCESS
 };
 
 export default createActions({
@@ -28,8 +30,6 @@ export default createActions({
       id
     };
   },
-  TEST: () => {
-    return {};
-  },
+  TEST: () => {},
   REMOVE_ALL: () => {}
 });
